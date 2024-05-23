@@ -1,0 +1,153 @@
+//The HTML for the bingo card generator
+//This project is under construction
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="general.css">
+        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="settings.css">
+        <link rel="stylesheet" type="text/css" href="input.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+        <script src="shuffle.js" defer></script>
+        <script src="input.js" defer></script>
+        <script src="settings.js" defer></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="columns">
+                <div id="settings" class="columns">
+                    <div id="font-settings">
+                        <div id="font-header">
+                            <h1>Font Settings</h1>
+                        </div>
+                        <div id="font">
+                            <label for="new-font-family">Choose Your Font:</label>
+                            <select id="new-font-family" name="square-font" onchange="setFont(); reshuffle();">
+                                <option value="none" selected disabled hidden>Select a Font</option>
+                                <option value="times-new-roman">Times New Roman</option>
+                                <option value="segoe-ui">Segoe UI</option>
+                                <option value="comic-sans-ms">Comic Sans</option>
+                                <option value="helvetica">Helvetica</option>
+                            </select>
+                        </div>
+                        <div id="font-color">
+                            <label for="new-font-color">Font Color:</label>
+                            <select id="new-font-color" name="font-color" onchange="setFontColor(); reshuffle();">
+                                <option value="none" selected disabled hidden>Select a Font Color</option>
+                                <option value="black">Black</option>
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                                <option value="red">Red</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="card-style" class="setting">
+                        <div id="card-header" class="header">
+                            <h1>Card Settings</h1>
+                        </div>
+                        <div id="border-font">
+                            <label for="new-border-font">Border Font:</label>
+                            <select id="new-border-font" name="border-font" onchange="setBingoFont(); reshuffle();">
+                                <option value="none" selected disabled hidden>Select a Font</option>
+                                <option value="times-new-roman">Times New Roman</option>
+                                <option value="segoe-ui">Segoe UI</option>
+                                <option value="calibri">Calibri</option>
+                                <option value="helvetica">Helvetica</option>
+                            </select>
+                        </div>
+                        <div id="border-color">
+                            <label for="new-border-color">Border Color:</label>
+                            <select id="new-border-color" name="border-color" onchange="setBorderColor(); reshuffle();">
+                                <option value="none" selected disabled hidden>Select a Color</option>
+                                <option value="black">Black</option>
+                                <option value="blue">Blue</option>
+                                <option value="green">Green</option>
+                                <option value="red">Red</option>
+                            </select>
+                        </div>
+                        <div id="logo">
+                            <div>Add a Logo:</div>
+                            <form action="/.php">
+                                <input type="file" id="my-logo" name="logo-name">
+                            </form>
+                        </div>
+                        <div id="promotion">
+                            <div>Promote:</div>
+                            <textarea id="promo-text" cols="50" rows="10" placeholder="Add your promotional text here!"></textarea>
+                        </div>
+                    </div>
+                    <div id="free-space-settings" class="setting">
+                        <div id="free-space-header" class="header">
+                            <h1>Free Space</h1>
+                        </div>
+                        <div id="free-space">
+                            <div>Free Space?</div>
+                            <input type="checkbox" id="checkbox">
+                        </div>
+                        <div id="custom-space">
+                            <div>Custom Space:</div>
+                            <form action="/.php">
+                                <input type="file" name="space-name">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div id="main">
+                    <div id="card">
+                        <table id="bingo-table">
+                            <tr id="bingo-row">
+                                <td class="bingo-header">B</td>
+                                <td class="bingo-header">I</td>
+                                <td class="bingo-header">N</td>
+                                <td class="bingo-header">G</td>
+                                <td class="bingo-header">O</td>
+                            </tr>
+                            <tr id="row-one" class="bingo-row">
+                                <td id="1" class="square"></td>
+                                <td id="2" class="square"></td>
+                                <td id="3" class="square"></td>
+                                <td id="4" class="square"></td>
+                                <td id="5" class="square"></td>
+                            </tr>
+                            <tr id="row-two" class="bingo-row">
+                                <td id="6" class="square"></td>
+                                <td id="7" class="square"></td>
+                                <td id="8" class="square"></td>
+                                <td id="9" class="square"></td>
+                                <td id="10" class="square"></td>
+                            </tr>
+                            <tr id="row-three" class="bingo-row">
+                                <td id="11" class="square"></td>
+                                <td id="12" class="square"></td>
+                                <td id="13" class="square"></td>
+                                <td id="14" class="square"></td>
+                                <td id="15" class="square"></td>
+                            </tr>
+                            <tr id="row-four" class="bingo-row">
+                                <td id="16" class="square"></td>
+                                <td id="17" class="square"></td>
+                                <td id="18" class="square"></td>
+                                <td id="19" class="square"></td>
+                                <td id="20" class="square"></td>
+                            </tr>
+                            <tr id="row-five" class="bingo-row">
+                                <td id="21" class="square"></td>
+                                <td id="22" class="square"></td>
+                                <td id="23" class="square"></td>
+                                <td id="24" class="square"></td>
+                                <td id="25" class="square"></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div id="input" class="column">
+                    <input id="input-field" type="text" size="30" placeholder="Enter Artist or Song" autofocus/>
+                    <div id="values"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
