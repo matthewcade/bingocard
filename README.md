@@ -7,5 +7,5 @@ Current features:
 - Remove artists
 - Change font family
 - Change font color
-- Change border color
-- Change BINGO header font
+- NEW Change border color
+- NEW Change BINGO header font
