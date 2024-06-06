@@ -37,18 +37,23 @@ function addArtist() {
     input.value = "";
 }
 
-//Checks if the artist is already listed in the artist array
-function checkArtist() {
-    if (artists.includes(input.value)) {
-        alert("Duplicate artist/song");
-        input.value = "";
-    } else {
-        addArtist();
+function customGame() {
+    if (document.getElementById("new-preset").selectedIndex == "0") {
+        if (artists.includes(input.value)) {
+            alert("duplicate artist/song");
+        } else if (artists.includes("")) {
+            const index = artists.indexOf("");
+            artists[index] = input.value;
+            valueArtist(input.value);
+        } else {
+            addArtist();
+        }
     }
+    input.value = "";
 }
 
 input.addEventListener("keydown", function(event) {
     if (event.key === "Enter") {
-        checkArtist();
+        customGame();
     }
 });

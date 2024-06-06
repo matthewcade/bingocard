@@ -25,7 +25,7 @@ function squareRows() {
     bingoRow.style.border = `1px solid ${borderColor}`;
 
     const b = document.createElement("td");
-    b.id = "b";
+    b.id = "header-b";
     b.classList.add("bingo-letter");
     b.innerHTML = "B";
     b.style.fontFamily = bingoFont;
@@ -34,7 +34,7 @@ function squareRows() {
     bingoRow.appendChild(b);
 
     const i = document.createElement("td");
-    i.id = "i";
+    i.id = "header-i";
     i.classList.add("bingo-letter");
     i.innerHTML = "I";
     i.style.fontFamily = bingoFont;
@@ -43,7 +43,7 @@ function squareRows() {
     bingoRow.appendChild(i);
 
     const n = document.createElement("td");
-    n.id = "n";
+    n.id = "header-n";
     n.classList.add("bingo-letter");
     n.innerHTML = "N";
     n.style.fontFamily = bingoFont;
@@ -52,7 +52,7 @@ function squareRows() {
     bingoRow.appendChild(n);
 
     const g = document.createElement("td");
-    g.id = "g";
+    g.id = "header-g";
     g.classList.add("bingo-letter");
     g.innerHTML = "G";
     g.style.fontFamily = bingoFont;
@@ -61,7 +61,7 @@ function squareRows() {
     bingoRow.appendChild(g);
 
     const o = document.createElement("td");
-    o.id = "o";
+    o.id = "header-o";
     o.classList.add("bingo-letter");
     o.innerHTML = "O";
     o.style.fontFamily = bingoFont;
@@ -116,39 +116,10 @@ export function shuffle() {
     for (let j = 1; j < 26; j++) {
         artists.push(document.getElementById("s" + [j]).innerHTML);
     }
-    
-    randomize();
-}
-
-//Reshuffles the card
-export function reshuffle() {
-    squareRows();
-
-    let numArr = artists.length;
-
-    let id = 1;
-
-    for (let j = 1; j < 26; j++) {
-        let index = Math.floor(Math.random() * numArr);
-        let newDiv = document.createElement("div");
-        newDiv.id = "s" + id;
-        newDiv.classList.add("artist-square");
-        newDiv.style.fontFamily = fontFamily;
-        newDiv.style.color = fontColor;
-        newDiv.innerHTML = artists.splice([index - 1], 1);
-
-        document.getElementById("square" + id).appendChild(newDiv);
-        numArr--;
-        id++;
-    }
-
-    for (let k = 1; k < 26; k++) {
-        artists.push(document.getElementById("s" + [k]).innerHTML);
-    }
 
     randomize();
 }
 
 shuffle();
 
-//setInterval(reshuffle, 3000);
+setInterval(shuffle, 3000);

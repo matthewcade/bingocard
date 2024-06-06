@@ -12,11 +12,25 @@
         <script type="module" src="input.js"></script>
         <script type="module" src="settings.js"></script>
         <script type="module" src="presets.js"></script>
+        <script type="module" src="promotion.js"></script>
     </head>
     <body>
         <div id="container">
             <div id="columns">
                 <div id="settings" class="columns">
+                    <div id="presets-setting">
+                        <div id="presets-header">
+                            <h1>Presets</h1>
+                        </div>
+                        <div id="presets">
+                            <label for="new-preset">Choose a Game:</label>
+                            <select id="new-preset" name="preset-choice">
+                                <option value="custom" selected>Custom Game</option>
+                                <option value="eighties">80s Artists</option>
+                                <option value="country90s">90s Country Songs</option>
+                            </select>
+                        </div>
+                    </div>
                     <div id="font-settings">
                         <div id="font-header">
                             <h1>Font Settings</h1>

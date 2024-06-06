@@ -2,7 +2,7 @@ const newFont = document.querySelector("#new-font-family");
 const newFontColor = document.querySelector("#new-font-color");
 const newBingoFont = document.querySelector("#new-bingo-font");
 const newBorderColor = document.querySelector("#new-border-color");
-import {reshuffle} from './card.js';
+import {shuffle} from './card.js';
 
 export let fontFamily = "";
 export let fontColor = "";
@@ -24,7 +24,7 @@ function setFont() {
 
 newFont.addEventListener("change", (event) => {
     setFont();
-    reshuffle();
+    shuffle();
 })
 
 //Square Font Color
@@ -42,7 +42,7 @@ function setFontColor() {
 
 newFontColor.addEventListener("change", (event) => {
     setFontColor();
-    reshuffle();
+    shuffle();
 })
 
 //Bingo Header Font Family
@@ -60,7 +60,7 @@ function setBingoFont() {
 
 newBingoFont.addEventListener("change", (event) => {
     setBingoFont();
-    reshuffle();
+    shuffle();
 })
 
 //Bingo Header Font Family
@@ -78,5 +78,5 @@ function setBorderColor() {
 
 newBorderColor.addEventListener("change", (event) => {
     setBorderColor();
-    reshuffle();
+    shuffle();
 })
