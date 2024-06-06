@@ -7,5 +7,7 @@ Current features:
 - Remove artists
 - Change font family
 - Change font color
-- NEW Change border color
-- NEW Change BINGO header font
+- Change border color
+- Change BINGO header font
+- NEW Presets
+- Promition Text(Under Construction)
