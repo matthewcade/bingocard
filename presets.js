@@ -49,7 +49,7 @@ export let eighties = [
     "Jane's Addiction",
     "Tina Turner",
     "Neil Young",
-    "George Michael/W.H.A.M.",
+    "George Michael",
     "Duran Duran",
     "Dire Straits",
     "John Cougar Mellancamp",

@@ -43,6 +43,12 @@
     align-items: center;
 }
 
+#promo-div {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
 .square {
     font-size: 7px;
     font-weight: bold;

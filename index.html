@@ -13,6 +13,7 @@
         <script type="module" src="settings.js"></script>
         <script type="module" src="presets.js"></script>
         <script type="module" src="promotion.js"></script>
+        <script type="module" src="logo.js"></script>
     </head>
     <body>
         <div id="container">
@@ -88,7 +89,7 @@
                         </div>
                         <div id="promotion">
                             <div>Promote:</div>
-                            <textarea id="promo-text" cols="50" rows="10" placeholder="Add your promotional text here!"></textarea>
+                            <textarea id="promo-text" cols="50" rows="10" maxlength="81" placeholder="Add your promotional text here!"></textarea>
                         </div>
                     </div>
                     <div id="free-space-settings" class="setting">
@@ -109,50 +110,8 @@
                 </div>
                 <div id="main">
                     <div id="card">
-                        <table id="bingo-table">
-                            <!--<tr id="bingo-row">
-                                <td id="b" class="bingo-header"></td>
-                                <td id="i" class="bingo-header"></td>
-                                <td id="n" class="bingo-header"></td>
-                                <td id="g" class="bingo-header"></td>
-                                <td id="o" class="bingo-header"></td>
-                            </tr>
-                            <tr id="row-one" class="bingo-row">
-                                <td id="1" class="square"></td>
-                                <td id="2" class="square"></td>
-                                <td id="3" class="square"></td>
-                                <td id="4" class="square"></td>
-                                <td id="5" class="square"></td>
-                            </tr>
-                            <tr id="row-two" class="bingo-row">
-                                <td id="6" class="square"></td>
-                                <td id="7" class="square"></td>
-                                <td id="8" class="square"></td>
-                                <td id="9" class="square"></td>
-                                <td id="10" class="square"></td>
-                            </tr>
-                            <tr id="row-three" class="bingo-row">
-                                <td id="11" class="square"></td>
-                                <td id="12" class="square"></td>
-                                <td id="13" class="square"></td>
-                                <td id="14" class="square"></td>
-                                <td id="15" class="square"></td>
-                            </tr>
-                            <tr id="row-four" class="bingo-row">
-                                <td id="16" class="square"></td>
-                                <td id="17" class="square"></td>
-                                <td id="18" class="square"></td>
-                                <td id="19" class="square"></td>
-                                <td id="20" class="square"></td>
-                            </tr>
-                            <tr id="row-five" class="bingo-row">
-                                <td id="21" class="square"></td>
-                                <td id="22" class="square"></td>
-                                <td id="23" class="square"></td>
-                                <td id="24" class="square"></td>
-                                <td id="25" class="square"></td>
-                            </tr>-->
-                        </table>
+                        <table id="bingo-table"></table>
+                        <div id="promo-div"></div>
                     </div>
                 </div>
                 <div id="input" class="column">
