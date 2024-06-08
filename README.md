@@ -1,6 +1,3 @@
-06/06/2024
-This project is under construction.
-
 Current features:
 - Card automatic shuffle
 - Add artists
@@ -9,5 +6,6 @@ Current features:
 - Change font color
 - Change border color
 - Change BINGO header font
-- NEW Presets
+- Presets
 - Promition Text(Under Construction)
+- NEW Free Space
