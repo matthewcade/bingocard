@@ -1,8 +1,10 @@
 .artists {
+    font-family: 'Nunito Sans';
     white-space: nowrap;
 }
 
 .ex {
+    font-family: 'Nunito Sans';
     color: #fff;
     background: #ff0000;
     width: 15px;
@@ -26,7 +28,7 @@
 }
 
 #input {
-    padding: 150px 100px 0 0;
+    padding: 200px 100px 0 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;

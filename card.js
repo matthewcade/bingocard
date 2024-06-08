@@ -1,4 +1,5 @@
 const bingoTable = document.querySelector("#bingo-table");
+const checkbox = document.querySelector("#checkbox");
 import {artists} from './presets.js';
 import {fontFamily, fontColor, bingoFont, borderColor} from './settings.js';
 
@@ -91,6 +92,21 @@ function squareRows() {
     }
 }
 
+//Check free space function
+function freeSpace() {
+    if (checkbox.checked == true) {        
+        let div = document.createElement("div");
+        div.style.fontFamily = fontFamily;
+        div.style.color = fontColor;
+        div.classList.add("artist-square");
+        div.id = "Free Space";
+        div.textContent = "Free Space";
+
+        const tr = document.getElementById("row3").children[2];
+        tr.replaceChild(div, tr.childNodes[0]);
+    }
+}
+
 //Shuffle the card with random artists
 export function shuffle() {
     squareRows();
@@ -118,6 +134,8 @@ export function shuffle() {
     }
 
     randomize();
+
+    freeSpace();
 }
 
 shuffle();

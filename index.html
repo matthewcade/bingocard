@@ -7,8 +7,7 @@
         <link rel="stylesheet" type="text/css" href="input.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Syne:wght@400..800&display=swap" rel="stylesheet">
-        <script type="module" src="card.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">        <script type="module" src="card.js"></script>
         <script type="module" src="input.js"></script>
         <script type="module" src="settings.js"></script>
         <script type="module" src="presets.js"></script>
@@ -19,7 +18,8 @@
         <div id="container">
             <div id="columns">
                 <div id="settings" class="columns">
-                    <div id="presets-setting">
+                    <div id="description"></div>
+                    <div id="presets-setting" class="sub-setting">
                         <div id="presets-header">
                             <h1>Presets</h1>
                         </div>
@@ -32,13 +32,13 @@
                             </select>
                         </div>
                     </div>
-                    <div id="font-settings">
+                    <div id="font-settings" class="header, sub-setting">
                         <div id="font-header">
                             <h1>Font Settings</h1>
                         </div>
                         <div id="font">
                             <label for="new-font-family">Choose Your Font:</label>
-                            <select id="new-font-family" name="square-font">
+                            <select id="new-font-family" class="select" name="square-font">
                                 <option value="none" selected disabled hidden>Select a Font</option>
                                 <option value="times-new-roman">Times New Roman</option>
                                 <option value="segoe-ui">Segoe UI</option>
@@ -48,7 +48,7 @@
                         </div>
                         <div id="font-color">
                             <label for="new-font-color">Font Color:</label>
-                            <select id="new-font-color" name="font-color">
+                            <select id="new-font-color" class="select" name="font-color">
                                 <option value="none" selected disabled hidden>Select a Font Color</option>
                                 <option value="black">Black</option>
                                 <option value="blue">Blue</option>
@@ -57,13 +57,13 @@
                             </select>
                         </div>
                     </div>
-                    <div id="card-style" class="setting">
+                    <div id="card-style" class="setting, sub-setting">
                         <div id="card-header" class="header">
                             <h1>Card Settings</h1>
                         </div>
                         <div id="bingo-font">
                             <label for="new-bingo-font">BINGO Font:</label>
-                            <select id="new-bingo-font" name="bingo-font">
+                            <select id="new-bingo-font" class="select" name="bingo-font">
                                 <option value="none" selected disabled hidden>Select a Font</option>
                                 <option value="times-new-roman">Times New Roman</option>
                                 <option value="segoe-ui">Segoe UI</option>
@@ -73,7 +73,7 @@
                         </div>
                         <div id="border-color">
                             <label for="new-border-color">Border Color:</label>
-                            <select id="new-border-color" name="border-color">
+                            <select id="new-border-color" class="select" name="border-color">
                                 <option value="none" selected disabled hidden>Select a Color</option>
                                 <option value="black">Black</option>
                                 <option value="blue">Blue</option>
@@ -92,7 +92,7 @@
                             <textarea id="promo-text" cols="50" rows="10" maxlength="81" placeholder="Add your promotional text here!"></textarea>
                         </div>
                     </div>
-                    <div id="free-space-settings" class="setting">
+                    <div id="free-space-settings" class="setting, sub-setting">
                         <div id="free-space-header" class="header">
                             <h1>Free Space</h1>
                         </div>

@@ -1,10 +1,38 @@
+#custom-space {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
+#free-space {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
 h1 {
-    font-family: 'Syne';
+    font-family: 'Nunito Sans';
     font-size: 20px;
     text-decoration: underline;
 }
 
+.sub-setting {
+    margin-top: 25px;
+}
+
+#logo {
+    margin-top: 2px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
+.select {
+    margin-top: 2px;
+}
+
 #settings {
+    font-family: 'Nunito Sans';
     text-align: left;
     color: #000;
     background: #fff;

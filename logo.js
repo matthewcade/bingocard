@@ -1,6 +1,6 @@
 const card = document.querySelector("#promo-div");
 
-const logoImage = "https://i.postimg.cc/267Dc81x/Pro-Joe-III-Productions.png";
+const logoImage = "https://i.postimg.cc/kgPmWpXC/Pro-Joe-III-Productions.png";
 
 function logo() {
     const newDiv = document.createElement("div");

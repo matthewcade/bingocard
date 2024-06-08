@@ -14,6 +14,7 @@ function promo() {
     divText.id = "promoDiv";
     divText.classList.add("promo");
     divText.style.color = "black";
+    divText.style.fontWeight = "bold";
     divText.style.maxWidth = "130px";
     divText.style.maxHeight = "150px";
     divText.style.overflowWrap = "break-word";
