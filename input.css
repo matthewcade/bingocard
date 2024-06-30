@@ -3,7 +3,7 @@
     white-space: nowrap;
 }
 
-.ex {
+.x {
     font-family: 'Nunito Sans';
     color: #fff;
     background: #ff0000;
@@ -15,7 +15,7 @@
     vertical-align: middle;
 }
 
-.holder {
+.value-container {
     background: #4c4c4c;
     height: 20px;
     border-radius: 5px;
@@ -28,7 +28,7 @@
 }
 
 #input {
-    padding: 200px 100px 0 0;
+    padding: 300px 100px 0 0;
     display: flex;
     flex-flow: column nowrap;
     justify-content: flex-start;

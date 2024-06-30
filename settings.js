@@ -9,7 +9,7 @@ export let fontColor = "";
 export let bingoFont = "";
 export let borderColor = "black";
 
-//Square Font Family
+//Set Font
 function setFont() {
     if (document.getElementById('new-font-family').selectedIndex == '1') {
         fontFamily = 'Times New Roman';
@@ -27,7 +27,7 @@ newFont.addEventListener("change", (event) => {
     shuffle();
 })
 
-//Square Font Color
+//Set Font Color
 function setFontColor() {
     if (document.getElementById('new-font-color').selectedIndex == '1') {
         fontColor = 'Black';
@@ -45,7 +45,7 @@ newFontColor.addEventListener("change", (event) => {
     shuffle();
 })
 
-//Bingo Header Font Family
+//Set Bingo Header Font
 function setBingoFont() {
     if (document.getElementById('new-bingo-font').selectedIndex == '1') {
         bingoFont = 'Times New Roman';

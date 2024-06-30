@@ -1,18 +1,35 @@
 const promoText = document.querySelector("#promo-text");
 const promoDiv = document.querySelector("#promo-div");
 const card = document.querySelector("#promo-div");
+const image = document.querySelector("#my-logo");
 
+/*
+//Empty promo section
+function emptyPromo() {
+    const div = document.createElement("div");
+    div.style.width = "266px";
+    div.style.height = "150px";
+
+    if (image.files.length === 0 && promoText.value == "") {
+        promoDiv.appendChild(div);
+    }
+}
+
+emptyPromo();*/
+
+//Adds the promotional text to the card
 function promo() {
-    const newDiv = document.createElement("div");
-    newDiv.id = "yourText";
-    newDiv.style.height = "150px"
-    newDiv.style.display = "flex";
-    newDiv.style.justifyContent = "center";
-    newDiv.style.alignItems = "center";
+    const div = document.createElement("div");
+    div.id = "yourText";
+    div.style.height = "150px"
+    div.style.display = "flex";
+    div.style.justifyContent = "center";
+    div.style.alignItems = "center";
 
     const divText = document.createElement("div");
     divText.id = "promoDiv";
     divText.classList.add("promo");
+    divText.style.fontFamily = "Segoe UI";
     divText.style.color = "black";
     divText.style.fontWeight = "bold";
     divText.style.maxWidth = "130px";
@@ -20,8 +37,8 @@ function promo() {
     divText.style.overflowWrap = "break-word";
     divText.innerHTML = promoText.value;;
 
-    newDiv.appendChild(divText);
-    card.appendChild(newDiv);
+    div.appendChild(divText);
+    card.appendChild(div);
 }
 
 promoText.addEventListener("change", (event) => {

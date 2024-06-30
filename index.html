@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="general.css">
-        <link rel="stylesheet" type="text/css" href="main.css">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" type="text/css" href="card.css">
         <link rel="stylesheet" type="text/css" href="settings.css">
         <link rel="stylesheet" type="text/css" href="input.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,29 +18,29 @@
         <div id="container">
             <div id="columns">
                 <div id="settings" class="columns">
-                    <div id="description"></div>
+                    <div id="description">&nbsp; &nbsp;Welcome to the Rock n' Roll Bingo Card Generator! Customize your card, choose a preset or create your own list of artists/songs, and promote your business!</div>
                     <div id="presets-setting" class="sub-setting">
-                        <div id="presets-header">
+                        <div class="header">
                             <h1>Presets</h1>
                         </div>
                         <div id="presets">
                             <label for="new-preset">Choose a Game:</label>
-                            <select id="new-preset" name="preset-choice">
+                            <select id="new-preset" class="select" name="new-preset">
                                 <option value="custom" selected>Custom Game</option>
                                 <option value="eighties">80s Artists</option>
                                 <option value="country90s">90s Country Songs</option>
                             </select>
                         </div>
                     </div>
-                    <div id="font-settings" class="header, sub-setting">
-                        <div id="font-header">
+                    <div id="font-settings" class="sub-setting">
+                        <div class="header">
                             <h1>Font Settings</h1>
                         </div>
                         <div id="font">
                             <label for="new-font-family">Choose Your Font:</label>
                             <select id="new-font-family" class="select" name="square-font">
                                 <option value="none" selected disabled hidden>Select a Font</option>
-                                <option value="times-new-roman">Times New Roman</option>
+                                <option value="times-new-roman">Times New Roman(Default)</option>
                                 <option value="segoe-ui">Segoe UI</option>
                                 <option value="comic-sans-ms">Comic Sans</option>
                                 <option value="helvetica">Helvetica</option>
@@ -57,8 +57,8 @@
                             </select>
                         </div>
                     </div>
-                    <div id="card-style" class="setting, sub-setting">
-                        <div id="card-header" class="header">
+                    <div id="card-style" class="sub-setting">
+                        <div class="header">
                             <h1>Card Settings</h1>
                         </div>
                         <div id="bingo-font">
@@ -84,7 +84,7 @@
                         <div id="logo">
                             <div>Add a Logo:</div>
                             <form action="/.php">
-                                <input type="file" id="my-logo" name="logo-name">
+                                <input type="file" id="my-logo" name="logo-name" accept="image/*">
                             </form>
                         </div>
                         <div id="promotion">
@@ -92,8 +92,8 @@
                             <textarea id="promo-text" cols="50" rows="10" maxlength="81" placeholder="Add your promotional text here!"></textarea>
                         </div>
                     </div>
-                    <div id="free-space-settings" class="setting, sub-setting">
-                        <div id="free-space-header" class="header">
+                    <div id="free-space-settings" class="sub-setting">
+                        <div class="header">
                             <h1>Free Space</h1>
                         </div>
                         <div id="free-space">
@@ -108,13 +108,14 @@
                         </div>
                     </div>
                 </div>
-                <div id="main">
+                <div id="main" class="columns">
+                    <div id="header"><img src="https://i.postimg.cc/4NkTx58g/Untitled.gif" width="550px"></div>
                     <div id="card">
                         <table id="bingo-table"></table>
                         <div id="promo-div"></div>
                     </div>
                 </div>
-                <div id="input" class="column">
+                <div id="input" class="columns">
                     <input id="input-field" type="text" size="30" placeholder="Enter Artist or Song" autofocus/>
                     <div id="values"></div>
                 </div>

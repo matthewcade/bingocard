@@ -16,7 +16,7 @@ function randomize() {
 }
 
 //Set Square Rows
-function squareRows() {
+function cardRows() {
     if (bingoTable.innerHTML) {
         bingoTable.innerHTML = "";
     }
@@ -75,20 +75,21 @@ function squareRows() {
     let id = 1;
     
     for (let i = 1; i < 6; i++) {
-        const newRow = document.createElement("tr");
-        newRow.id = "row" + [i];
+        const row = document.createElement("tr");
+        row.id = "row" + [i];
 
         for (let j = 1; j < 6; j++) {
-            const newSquare = document.createElement("td");
-            newSquare.id = "square" + id;
-            newSquare.classList.add("square");
-            newSquare.style.border = `1px solid ${borderColor}`;
+            const square = document.createElement("td");
+            square.id = "square" + id;
+            square.classList.add("square");
+            square.style.border = `1px solid ${borderColor}`;
             
-            newRow.appendChild(newSquare);
+            row.appendChild(square);
 
             id++;
         }
-    bingoTable.appendChild(newRow);
+
+    bingoTable.appendChild(row);
     }
 }
 
@@ -109,7 +110,7 @@ function freeSpace() {
 
 //Shuffle the card with random artists
 export function shuffle() {
-    squareRows();
+    cardRows();
 
     let numArr = artists.length;
 
@@ -117,14 +118,14 @@ export function shuffle() {
 
     for (let i = 1; i < 26; i++) {
         let index = Math.floor(Math.random() * numArr);
-        let newDiv = document.createElement("div");
-        newDiv.id = "s" + id;
-        newDiv.classList.add("artist-square");
-        newDiv.style.fontFamily = fontFamily;
-        newDiv.style.color = fontColor;
-        newDiv.innerHTML = artists.splice([index - 1], 1);
+        let div = document.createElement("div");
+        div.id = "s" + id;
+        div.classList.add("artist-square");
+        div.style.fontFamily = fontFamily;
+        div.style.color = fontColor;
+        div.innerHTML = artists.splice([index - 1], 1);
 
-        document.getElementById("square" + id).appendChild(newDiv);
+        document.getElementById("square" + id).appendChild(div);
         numArr--;
         id++;
     }
@@ -134,7 +135,6 @@ export function shuffle() {
     }
 
     randomize();
-
     freeSpace();
 }
 

@@ -4,6 +4,13 @@
     gap: 5px;
 }
 
+#description {
+    font-weight: bold;
+    width: 250px;
+    margin: 25px 0 25px 0;
+    align-self: center;
+}
+
 #free-space {
     display: flex;
     flex-flow: row nowrap;
@@ -27,6 +34,10 @@ h1 {
     gap: 5px;
 }
 
+#promo-text {
+    resize: none;
+}
+
 .select {
     margin-top: 2px;
 }
@@ -36,6 +47,7 @@ h1 {
     text-align: left;
     color: #000;
     background: #fff;
+    max-width: 430px;
     padding: 20px 20px 0 20px;
     display: flex;
     flex-flow: column nowrap;

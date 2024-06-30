@@ -2,6 +2,7 @@ const card = document.querySelector("#promo-div");
 
 const logoImage = "https://i.postimg.cc/kgPmWpXC/Pro-Joe-III-Productions.png";
 
+//Adds the logo to the card's promotional area
 function logo() {
     const newDiv = document.createElement("div");
     newDiv.style.height = "150px"

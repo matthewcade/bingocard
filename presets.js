@@ -127,6 +127,7 @@ export let country90s = [
     "I Still Believe in You"
 ]
 
+//Sets the game mode
 function setPreset() {
     if (document.getElementById("new-preset").selectedIndex == '0') {
         artists.length = [];
