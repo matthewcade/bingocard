@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="index.css">
-        <link rel="stylesheet" type="text/css" href="card.css">
-        <link rel="stylesheet" type="text/css" href="settings.css">
-        <link rel="stylesheet" type="text/css" href="input.css">
+        <link rel="stylesheet" type="text/css" href="styles/index.css">
+        <link rel="stylesheet" type="text/css" href="styles/card.css">
+        <link rel="stylesheet" type="text/css" href="styles/settings.css">
+        <link rel="stylesheet" type="text/css" href="styles/input.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">        <script type="module" src="card.js"></script>
@@ -13,6 +13,7 @@
         <script type="module" src="presets.js"></script>
         <script type="module" src="promotion.js"></script>
         <script type="module" src="logo.js"></script>
+        <script type="module" src="upload.js"></script>
     </head>
     <body>
         <div id="container">
@@ -81,12 +82,7 @@
                                 <option value="red">Red</option>
                             </select>
                         </div>
-                        <div id="logo">
-                            <div>Add a Logo:</div>
-                            <form action="/.php">
-                                <input type="file" id="my-logo" name="logo-name" accept="image/*">
-                            </form>
-                        </div>
+                        <div id="logo"></div>
                         <div id="promotion">
                             <div>Promote:</div>
                             <textarea id="promo-text" cols="50" rows="10" maxlength="81" placeholder="Add your promotional text here!"></textarea>
@@ -100,12 +96,7 @@
                             <div>Free Space?</div>
                             <input type="checkbox" id="checkbox">
                         </div>
-                        <div id="custom-space">
-                            <div>Custom Space:</div>
-                            <form action="/.php">
-                                <input type="file" name="space-name">
-                            </form>
-                        </div>
+                        <div id="custom-space"></div>
                     </div>
                 </div>
                 <div id="main" class="columns">
@@ -113,6 +104,9 @@
                     <div id="card">
                         <table id="bingo-table"></table>
                         <div id="promo-div"></div>
+                    </div>
+                    <div id="generate">
+                        <button id="button">Generate</button>
                     </div>
                 </div>
                 <div id="input" class="columns">

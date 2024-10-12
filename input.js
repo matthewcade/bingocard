@@ -4,7 +4,7 @@ const preset = document.querySelector("#new-preset");
 import {artists} from './presets.js';
 
 //Creates the artist block beneath the input
-export function valueArtist(event) {
+function valueArtist(event) {
     if (event) {
         let container = document.createElement("div");
         container.id = event.replace(" ", "") + "-container";

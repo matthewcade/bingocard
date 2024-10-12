@@ -2,6 +2,7 @@ const bingoTable = document.querySelector("#bingo-table");
 const checkbox = document.querySelector("#checkbox");
 import {artists} from './presets.js';
 import {fontFamily, fontColor, bingoFont, borderColor} from './settings.js';
+import {uploadCheck} from './upload.js';
 
 //Pick a random artist
 function randomize() {
@@ -96,15 +97,30 @@ function cardRows() {
 //Check free space function
 function freeSpace() {
     if (checkbox.checked == true) {        
-        let div = document.createElement("div");
-        div.style.fontFamily = fontFamily;
-        div.style.color = fontColor;
-        div.classList.add("artist-square");
-        div.id = "Free Space";
-        div.textContent = "Free Space";
+        if (uploadCheck == false) {
+            let div = document.createElement("div");
+            div.style.fontFamily = fontFamily;
+            div.style.color = fontColor;
+            div.classList.add("artist-square");
+            div.id = "Free Space";
+            div.textContent = "Free Space";
 
-        const tr = document.getElementById("row3").children[2];
-        tr.replaceChild(div, tr.childNodes[0]);
+            const tr = document.getElementById("row3").children[2];
+            tr.replaceChild(div, tr.childNodes[0]);
+        } else {
+            let div = document.createElement("div");
+            div.id = "Free Space";
+            let image = document.getElementById("output_image");
+            let source = image.src;
+            let freeSpaceImage = document.createElement("img");
+            freeSpaceImage.src = source;
+            freeSpaceImage.setAttribute("height", "50px");
+            freeSpaceImage.setAttribute("width", "50px");
+            div.appendChild(freeSpaceImage);
+
+            const tr = document.getElementById("row3").children[2];
+            tr.replaceChild(div, tr.childNodes[0]);
+        }
     }
 }
 
