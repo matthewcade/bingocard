@@ -1,0 +1,62 @@
+#custom-block-one {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
+#custom-block-two {
+    margin-top: 5px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+#custom-space {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 5px;
+}
+
+#free-space {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
+#logo {
+    margin-top: 2px;
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 5px;
+}
+
+#promo-text {
+    resize: none;
+}
+
+.select {
+    margin-top: 2px;
+}
+
+#settings {
+    font-family: 'Nunito Sans';
+    font-weight: bold;
+    font-size: 24px;
+    text-align: left;
+    color: #000;
+    background: #fff;
+    max-width: 430px;
+    min-height: 100vh;
+    padding: 0 20px 0 40px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.setting-section {
+    margin-top: 25px;
+}
+
+#uploadForm {
+    display: flex;
+    flex-flow: column nowrap;
+}
