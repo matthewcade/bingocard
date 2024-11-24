@@ -1,4 +1,4 @@
-const preset = document.querySelector("#new-preset");
+const preset = document.querySelector("#game-preset");
 import {shuffle} from './card.js';
 
 export let artists = [];
@@ -129,11 +129,11 @@ export let country90s = [
 
 //Sets the game mode
 function setPreset() {
-    if (document.getElementById("new-preset").selectedIndex == '0') {
+    if (document.getElementById("game-preset").selectedIndex == '0') {
         artists.length = [];
-    } else if (document.getElementById("new-preset").selectedIndex == '1') {
+    } else if (document.getElementById("game-preset").selectedIndex == '1') {
         artists = eighties;
-    } else if (document.getElementById("new-preset").selectedIndex == '2') {
+    } else if (document.getElementById("game-preset").selectedIndex == '2') {
         artists = country90s;
     }
 }

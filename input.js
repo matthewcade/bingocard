@@ -1,6 +1,6 @@
 const input = document.querySelector("#input-field");
 const values = document.querySelector("#values");
-const preset = document.querySelector("#new-preset");
+const preset = document.querySelector("#game-preset");
 import {artists} from './presets.js';
 
 //Creates the artist block beneath the input
@@ -40,7 +40,7 @@ function addArtist() {
 
 //Checks if the value is already listed and adds the input value
 function customGame() {
-    if (document.getElementById("new-preset").selectedIndex == "0") {
+    if (document.getElementById("game-preset").selectedIndex == "0") {
         if (artists.includes(input.value)) {
             alert("duplicate artist/song");
         } else if (artists.includes("")) {

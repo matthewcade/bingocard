@@ -6,6 +6,7 @@ const logoImage = '';
 
 export let adCheck = false;
 
+//Logo Image Upload
 export const adLogo = document.createElement('input');
 adLogo.setAttribute('type', 'file');
 adLogo.id = 'adInput';

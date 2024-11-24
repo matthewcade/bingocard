@@ -2,7 +2,7 @@ const bingoTable = document.querySelector("#bingo-table");
 const checkbox = document.querySelector("#checkbox");
 import {artists} from './presets.js';
 import {fontFamily, fontColor, bingoFont, borderColor} from './settings.js';
-import {uploadCheck} from './upload.js';
+import {uploadCheck} from './freespace.js';
 
 //Pick a random artist
 function randomize() {

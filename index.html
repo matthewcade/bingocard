@@ -14,31 +14,25 @@
         <script type="module" src="promotion.js"></script>
         <script type="module" src="logo.js"></script>
         <script type="module" src="upload.js"></script>
+        <script src="server.js"></script>
     </head>
     <body>
         <div id="container">
             <div id="columns">
-                <div id="settings" class="columns">
-                    <div id="description">&nbsp; &nbsp;Welcome to the Rock n' Roll Bingo Card Generator! Customize your card, choose a preset or create your own list of artists/songs, and promote your business!</div>
-                    <div id="presets-setting" class="sub-setting">
-                        <div class="header">
-                            <h1>Presets</h1>
-                        </div>
+                <div id="settings">
+                    <div class="setting-section">
                         <div id="presets">
-                            <label for="new-preset">Choose a Game:</label>
-                            <select id="new-preset" class="select" name="new-preset">
+                            <label for="game-preset">Preset:</label>
+                            <select id="game-preset" class="select" name="game-preset">
                                 <option value="custom" selected>Custom Game</option>
                                 <option value="eighties">80s Artists</option>
                                 <option value="country90s">90s Country Songs</option>
                             </select>
                         </div>
                     </div>
-                    <div id="font-settings" class="sub-setting">
-                        <div class="header">
-                            <h1>Font Settings</h1>
-                        </div>
-                        <div id="font">
-                            <label for="new-font-family">Choose Your Font:</label>
+                    <div id="font-settings" class="setting-section">
+                        <div id="font-family">
+                            <label for="new-font-family">Font:</label>
                             <select id="new-font-family" class="select" name="square-font">
                                 <option value="none" selected disabled hidden>Select a Font</option>
                                 <option value="times-new-roman">Times New Roman(Default)</option>
@@ -48,7 +42,7 @@
                             </select>
                         </div>
                         <div id="font-color">
-                            <label for="new-font-color">Font Color:</label>
+                            <label for="new-font-color">Color:</label>
                             <select id="new-font-color" class="select" name="font-color">
                                 <option value="none" selected disabled hidden>Select a Font Color</option>
                                 <option value="black">Black</option>
@@ -58,10 +52,7 @@
                             </select>
                         </div>
                     </div>
-                    <div id="card-style" class="sub-setting">
-                        <div class="header">
-                            <h1>Card Settings</h1>
-                        </div>
+                    <div id="card-style" class="setting-section">
                         <div id="bingo-font">
                             <label for="new-bingo-font">BINGO Font:</label>
                             <select id="new-bingo-font" class="select" name="bingo-font">
@@ -73,7 +64,7 @@
                             </select>
                         </div>
                         <div id="border-color">
-                            <label for="new-border-color">Border Color:</label>
+                            <label for="new-border-color">Outline Color:</label>
                             <select id="new-border-color" class="select" name="border-color">
                                 <option value="none" selected disabled hidden>Select a Color</option>
                                 <option value="black">Black</option>
@@ -88,10 +79,7 @@
                             <textarea id="promo-text" cols="50" rows="10" maxlength="81" placeholder="Add your promotional text here!"></textarea>
                         </div>
                     </div>
-                    <div id="free-space-settings" class="sub-setting">
-                        <div class="header">
-                            <h1>Free Space</h1>
-                        </div>
+                    <div id="free-space-settings" class="setting-section">
                         <div id="free-space">
                             <div>Free Space?</div>
                             <input type="checkbox" id="checkbox">
@@ -99,8 +87,7 @@
                         <div id="custom-space"></div>
                     </div>
                 </div>
-                <div id="main" class="columns">
-                    <div id="header"><img src="https://i.postimg.cc/4NkTx58g/Untitled.gif" width="550px"></div>
+                <div id="main">
                     <div id="card">
                         <table id="bingo-table"></table>
                         <div id="promo-div"></div>
@@ -109,7 +96,7 @@
                         <button id="button">Generate</button>
                     </div>
                 </div>
-                <div id="input" class="columns">
+                <div id="input">
                     <input id="input-field" type="text" size="30" placeholder="Enter Artist or Song" autofocus/>
                     <div id="values"></div>
                 </div>

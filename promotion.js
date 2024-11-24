@@ -3,20 +3,6 @@ const promoDiv = document.querySelector("#promo-div");
 const card = document.querySelector("#promo-div");
 const image = document.querySelector("#my-logo");
 
-/*
-//Empty promo section
-function emptyPromo() {
-    const div = document.createElement("div");
-    div.style.width = "266px";
-    div.style.height = "150px";
-
-    if (image.files.length === 0 && promoText.value == "") {
-        promoDiv.appendChild(div);
-    }
-}
-
-emptyPromo();*/
-
 //Adds the promotional text to the card
 function promo() {
     const div = document.createElement("div");
