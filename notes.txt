@@ -1,0 +1,5 @@
+Features to add:
+- Save Progress
+- Profiles
+- Collapsing Settings(Default Collapsed)
+- Rename Features and variables
